@@ -1,0 +1,36 @@
+{
+  "name": "node-app-boilerplate",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.12"
+  },
+  "scripts": {
+    "test": "multi='mocha-spec-cov-alt=- html-cov=coverage.html' node_modules/mocha/bin/mocha -R mocha-multi"
+  },
+  "author": "Emerson Macedo (emerleite@gmail.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "blanket": "*",
+    "chai": "*",
+    "mocha": "*",
+    "mocha-multi": "*",
+    "mocha-spec-cov-alt": "*",
+    "sinon": "*",
+    "sinon-chai": "*"
+  },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "lib"
+      ],
+      "data-cover-never": [
+        "node_modules",
+        "tests"
+      ],
+      "data-cover-reporter-options": {
+        "shortnames": true
+      }
+    }
+  }
+}
